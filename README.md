@@ -1,2 +1,2 @@
-# echo-lecture-examples
-A repository for the notes developed during Echo 2022's lectures. 
+# Lecture Examples for Echo 2022
+## Files and folders in this repository are named language-topic or framework-topic
