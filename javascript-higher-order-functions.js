@@ -38,7 +38,7 @@ const myFunction = () => {}
   //   console.log(value ** 5)
   // })
 
-  // Output: 
+  // Output:
     // 1
     // 32
     // 243
@@ -53,8 +53,9 @@ const myFunction = () => {}
       // .forEach((value, index, array)=>{})
       // .map((value, index, array)=>{})
       // .filter((value, index, array)=>{})
+// _________________________________________________________
 
-    // value
+    // VALUE
       const myDrinkArray = ["Red Bull", "Tang", "Coffee", "Sprite", "Beer"]
 
       // myDrinkArray.forEach((value)=>{
@@ -80,8 +81,11 @@ const myFunction = () => {}
         // drinks from myDrinkArray Coffee
         // drinks from myDrinkArray Sprite
         // drinks from myDrinkArray Beer
+// _________________________________________________________
 
-// Index
+
+
+    // INDEX
       // myDrinkArray.forEach((drinks, index)=>{
       //   console.log("drinks from myDrinkArray", drinks)
       //   console.log("index from myDrinkArray", index)
@@ -102,14 +106,15 @@ const myFunction = () => {}
       // myDrinkArray.forEach((index) => {
       //   console.log("index from myDrinkArray", index)
       // })
+// _________________________________________________________
 
-// Array
+// ARRAY
       // myDrinkArray.forEach((drinks, index, array)=>{
       //   console.log("drinks from myDrinkArray", drinks)
       //   console.log("index from myDrinkArray", index)
       //   console.log("array from myDrinkArray", array);
       // })
-      // output: 
+      // output:
         // drinks from myDrinkArray Red Bull
         // index from myDrinkArray 0
         // array from myDrinkArray['Red Bull', 'Tang', 'Coffee', 'Sprite', 'Beer']
@@ -126,10 +131,13 @@ const myFunction = () => {}
         // index from myDrinkArray 4
         // array from myDrinkArray['Red Bull', 'Tang', 'Coffee', 'Sprite', 'Beer']
 
+// _________________________________________________________
+// _________________________________________________________
 
-// Map
+// MAP
+  // .map(()=>{})
       // Map iterates over an array and gives us back a new array
-      // Map (tries) to return to us an array of the same length of the original array
+      // Map (tries to) return to us an array of the same length of the original array
       
     // const multThree = [3,6,9].map((value)=>{
     //   return value * 3
@@ -167,23 +175,31 @@ const myFunction = () => {}
     // console.log("even or odd flag:", evenOrOdd);
     // output: even or odd flag: [ 'even', 'odd', 'even', 'odd', 'odd' ]
 
+// _________________________________________________________
 
-    // SYNTACTICAL SUGAR
-      // full syntax
-    // let multThree = numArray.map((value) =>{
-    //   return value * 3
-    // })
 
-    //   console.log("multThree:", multThree)
+    // Syntactical sugar - wrappers over code functionality that make the language sweeter
 
-    // no code block syntax
-    // let multThree = numArray.map((value) => value * 3)
-    //   console.log("multThree:", multThree)
+        //ex. a for loop becomes forEach
 
-    // no parens syntax
-    // let multThree = numArray.map(value => value * 3)
-    //   console.log("multThree:", multThree)
+// _________________________________________________________
+    // HOF Syntax shorthands
+      // full syntax, parens, curly brackets, and return
+          // let multThree = numArray.map((value) =>{
+          //   return value * 3
+          // })
 
+
+    // no code block, no return, inline syntax
+        // let multThree = numArray.map((value) => value * 3)
+        //   console.log("multThree:", multThree)
+
+    // no parens syntax, single parameter (i.e. no index no array)
+        // let multThree = numArray.map(value => value * 3)
+        //   console.log("multThree:", multThree)
+
+// _________________________________________________________
+// _________________________________________________________
 
 // Filter
     // Filter iterates over an array and gives us back a new array
@@ -192,61 +208,61 @@ const myFunction = () => {}
       // filter will only return a value when a condition is true
 
 
-// let myArrayOfStuff = [6, 4, 5, true, false, 1000, "hello", "yo", null, 5]
- // filter through array and return only odd numbers
+    // let myArrayOfStuff = [6, 4, 5, true, false, 1000, "hello", "yo", null, 5]
+    // filter through array and return only odd numbers
 
-    //filter through array and only return numbers in a new array
-  // let numberStuff = myArrayOfStuff.filter((notebook)=>{
-  //   return typeof notebook === "number"
-  // })
+        //filter through array and only return numbers in a new array
+      // let numberStuff = myArrayOfStuff.filter((notebook)=>{
+      //   return typeof notebook === "number"
+      // })
 
-  // console.log(myArrayOfStuff)
-    //output
-  // [
-  //   6, 4,
-  //   5, true,
-  //   false, 1000,
-  //   'hello', 'yo',
-  //   null, 5
-  // ]
+      // console.log(myArrayOfStuff)
+        //output
+      // [
+      //   6, 4,
+      //   5, true,
+      //   false, 1000,
+      //   'hello', 'yo',
+      //   null, 5
+      // ]
 
-// console.log("numberStuff:", numberStuff)
-// output: numberStuff: [ 6, 4, 5, 1000, 5 ]
+    // console.log("numberStuff:", numberStuff)
+    // output: numberStuff: [ 6, 4, 5, 1000, 5 ]
 
-// let oddStuff = numberStuff.filter((value)=>{
-//   return value % 2 !== 0
-// })
+    // let oddStuff = numberStuff.filter((value)=>{
+    //   return value % 2 !== 0
+    // })
 
-// console.log("oddStuff:", oddStuff);
-// oddStuff: [5, 5]
+    // console.log("oddStuff:", oddStuff);
+    // oddStuff: [5, 5]
 
-// let numberStuff2 = myArrayOfStuff.filter((notebook) => {
-//   return typeof notebook === "number" && notebook % 2 !== 0
-// })
+    // let numberStuff2 = myArrayOfStuff.filter((notebook) => {
+    //   return typeof notebook === "number" && notebook % 2 !== 0
+    // })
 
-// console.log("numberStuff2:", numberStuff2)
+    // console.log("numberStuff2:", numberStuff2)
 
 // _________________________________________
 
+// Bring it all together inside a function
 // need a function that takes in an array of numbers and returns only numbers that are less than 100 but odd numbers are replaced with the word "odd"
 
+// step one - write the function and call it to see the return
   // const numberFunction = (array) => {
   //   return array
   // }
 
-//output; [
-// 1231, 345634,
-//   8, 1,
-//   141, 231,
-//   45
-// ]
+    //output: [1231, 345634,8, 1,141, 231,45]
 
+// step two - add a variable that transforms the data of the parameter and return that new variable
 
 // const numberFunction = (array) => {
 //   let underOneHundred = array.filter(value => value < 100)
 //   return underOneHundred
 // }
 //output: [ 8, 1, 45 ]
+
+// step three - add a variable that transforms the data of the previous variable and return that new variable
 
 const numberFunction = (array) => {
   let underOneHundred = array.filter(value => value < 100)
