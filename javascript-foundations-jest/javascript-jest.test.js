@@ -7,11 +7,16 @@
 // - $ git checkout -b jest
 // - $ mkdir javascript-foundations-jest
 // - $ cd javascript-foundations-jest
-// - $ cd ..
-// - $ cd javascript-foundations-jest
 // - $ touch javascript-jest.test.js
 // - $ code .
 // - $ yarn add jest
+
+// Pushing changes to gitHub repo
+// - $ cd ..
+// - $ git status
+// - $ git add javascript-foundations-jest/
+// - $ git commit -m "lecture notes for javascript testing with jest"
+// - $ git push origin jest
 
 // Does your function work correctly? Consider the following items:
 // Input
