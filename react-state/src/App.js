@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import MileTracker from './components/MileTracker'
+import './App.css'
 
 const App = () => {
 
@@ -8,9 +9,10 @@ const App = () => {
       <h1>Run Tracker App</h1>
       <p style={{color: "green"}}>January</p>
       <MileTracker />
-      <p>February</p>
+      <p style={{backgroundColor: "purple"}}>February</p>
       <MileTracker />
-      <p>March</p>
+
+      <p className="red">March</p>
       <MileTracker />
     </>
   )

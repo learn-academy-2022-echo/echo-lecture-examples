@@ -40,3 +40,20 @@ const App = () => {
 
 export default App
 ```
+
+- Inline styling
+  - pass style attribute in the opening html tag
+  ```javascript
+      <p style={{backgroundColor: "purple"}}>February</p>
+  ```
+  - the style attribute has a curly brace that encapsulate its key: value pairs for styling
+  - an additional curly brace is needed for jsx
+  - the key is in camelCase
+
+- Using css file
+  - class - use attribute `className` in the html opening tag and `.` with the custom name on the css file
+  - id - use attribute `id` in the html opening tag and `#` with the custom name on the css file
+  - import the css file
+  ```javascript
+    import './App.css'
+  ```
