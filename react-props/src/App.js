@@ -24,7 +24,11 @@ const App = () => {
     <>
       <h1 className="red">Animal Flash card application</h1>
 
-      <FlashCard animals={animals} index={randomIndex} hulk={handleClick}/>
+      {animals.map((value)=>{
+        return <FlashCard animal={value} index={randomIndex} handleClick={handleClick} />
+      })}
+      
+      {/* <FlashCard animals={animals} index={randomIndex} handleClick={handleClick} /> */}
       
       <button onClick={addAnimal}> Get ya a new animal</button>
       
