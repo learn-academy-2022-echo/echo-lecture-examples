@@ -154,7 +154,7 @@ end
 
 def has_letter array, letter
   array.select do |holden_like_whatever_man|
-    holden_like_whatever_man.include?(letter)
+    holden_like_whatever_man.include?()
   end
 end
 
