@@ -125,7 +125,9 @@ add_column :members, :gigs, :integer
 
 - using the update_all method
 > gigs_update = Member.where(gigs:nil)
+
 > gigs_update.update_all(gigs: 2)
+
 > Member.all
 
 Output:                                                            
