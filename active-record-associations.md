@@ -36,19 +36,36 @@ User.create ...
   - the model with on the belongs_to side will need a foreign key to track which user each blog_post is from
 ```
   $ rails g model BlogPost title:string post:text img_url:string user_id:integer
+                                                                   ^ user foreign_key
 ```
+
 
 ```ruby
 class BlogPost < ApplicationRecord
   belongs_to :user
 end
 ```
-- belongs_to relationship is declared on the 
+- belongs_to relationship is declared on the model that holds the foreign_key 
+
 ```ruby
 class User < ApplicationRecord
   has_many :blog_posts
 end
-```
+``` 
+- in this case blog posts belongs to individual users, and users can have many blog posts
+
+
+## Creating Blog Posts
+- While we can forcibly pass a foreign_key to a blog-post creation, it's better to let rails handle the association between the tables on it's own. 
+
+We can do this by: 
+1. Establishing a variable of the user that is making a post
+  > kelly = User.where(user_name:'kellllllly')[0]
+    (.where returns an array)
+2. Calling on the variable and appending the associated table pluralized because the kind of relationship 
+  > kelly.blog_posts
+3. Pass the create method with all of the needed arguments WITHOUT the foreign_key
+  > kelly.blog_posts.create ...
 
 ```ruby
 kelly.blog_posts.create title:'more on fairy tail', post:'lorem ipsum',
