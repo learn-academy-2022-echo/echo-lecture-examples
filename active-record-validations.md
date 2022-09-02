@@ -44,6 +44,8 @@ end
 - We have to write tests as if we were a hacker or confused user trying to send the wrong info into our database
   - our code then needs to reject that data
 
+
+
 ```ruby
 describe 'Player Model' do
   it 'throws an error if name is empty' do
@@ -64,6 +66,13 @@ Failures:
 
 Finished in 0.1167 seconds (files took 2.02 seconds to load)
 1 example, 1 failure
+
+## looking at the test above
+  - 'player' is a ruby variable that we are creating and assigning using the "=" assignment operator. 
+  - 'Player' (capitol 'P') is ruby class that is also an Active Record model that defines the relationship the table "players" adheres too.
+  - .create is an Active Record method that takes arguments of expected column_names and the data you want inserted on the row. 
+
+  If we print player we can see that it has not just the object that it represents but also information from active record about the data being inserted or not into the database. 
 
 # TDD 
 - Red 
