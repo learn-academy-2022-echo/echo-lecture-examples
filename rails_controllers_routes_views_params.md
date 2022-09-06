@@ -4,6 +4,14 @@
 
 - Views: graphical representation of the html content that is sent back for the user to see
 
+- *** Updated Notes ***
+  ### Data flow in the request-response cycle
+  - The web server receives the request. It uses routes (url) to find out which controller to use.
+
+  - Controllers do the work of analyzing user requests. It gives orders what data to grab from the database. It tells our app what view to render as a response. It is a class that contains methods that get called by the route. 
+
+  - Views are what the user sees: HTML, CSS, XML, Javascript, JSON. It is a by product of the route and controller method.
+
 ### Create Rails App
 - $ rails new routes_controllers_views_params -d postgresql -T
 - $ cd routes_controllers_views_params
