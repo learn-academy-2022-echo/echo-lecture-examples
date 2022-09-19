@@ -63,4 +63,9 @@ const getIp = () => {
 - create a .env file 
 - paste your key into the .env file
 - add the .env file to your .gitignore
+- in the .env file assign the key to the name REACT_APP_{whatever thing you want in all caps}_API_KEY
+- call on that .env variable in your React project using 
 
+```javascript
+process.env.REACT_APP_API_KEY
+```
