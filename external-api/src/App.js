@@ -8,13 +8,12 @@ const App = () => {
   const API_KEY = process.env.REACT_APP_API_KEY
   // fetch to NasaAPi
   const requestNasaData = () => {
+    // call upon my apikey
     fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=${API_KEY}`)
     .then(response => response.json())
     .then(payload => setNasaData(payload))
     .catch(errors => console.log(errors))
   }
-
-    // call upon my apikey
 
 
   return (
